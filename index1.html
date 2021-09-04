@@ -1,0 +1,230 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>     
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <script>
+       function myFunc()
+       {
+           window.alert("click on the icon at the bottom to navigate between assignments.")
+       }
+   </script>
+   <style>
+      .rating
+      {
+          display:none;
+      }
+      .fa
+      {
+          color:gold;
+          font-size: 30px;
+          text-shadow: 0 0 2px black;
+      }
+      input:checked + label ~ label
+      {
+            color:white;
+      }
+      input:active + label
+      {
+          transform: scale(2);
+          transition: 0.5s ease;
+      }
+      .container
+      {
+          display: flex;
+          border: 1px solid black;
+          align-items: center;
+          width: fit-content;
+          padding-left: 2rem;
+          padding-right: 2rem;
+      }
+      input[type="text"],input[type="email"],textarea
+      {
+          border: 2px solid rgb(204, 201, 201);
+      }
+      .radios2:nth-child(odd), .radios1:nth-child(even)
+      {
+          background-color: rgb(183, 184, 183);
+          border-radius: 0.2rem;
+      }
+      .radios > .col
+      {
+          text-align: center;
+      }
+      .radios
+      {
+          align-items: center;
+      }
+    .radios > .col > input[type="radio"]
+      { width : 1rem;
+        height:1.2rem;
+      }
+    .radios > .col >label,p
+    {
+        font-size: 0.9rem;
+        font-family: Garamond;
+    }
+    .mainlabel
+    {
+        font-weight: bold;
+    }
+    sup
+    {
+        color:red;
+    }
+    .mainlabel
+    {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .name
+    {
+        font-family: Georgia;
+        font-size: 0.9rem;
+        font-style: italic;
+    }
+    textarea
+    {
+        margin-bottom: 1rem;
+    }
+    button
+    {
+        padding: 0.3rem;
+    }
+    .icon1{
+        position: absolute;
+        font-size: 0.7rem;
+        border: 1px solid black;
+        padding: 0.3rem;
+        top:0.5rem;
+        right:1rem;
+    }
+    .icon
+    {
+        position: relative;
+    }
+    img{
+        height:2rem;
+        position: absolute;
+        bottom: 0.9rem;
+        right : 0rem;
+        filter : opacity(40%);
+    }
+    .icon2
+       {
+           position:fixed;
+            font-size: 4rem;
+            bottom:0rem;
+            color: rgb(235, 10, 235);
+       }
+    .icon2:hover 
+        {
+        color:rgb(29, 29, 196);
+        }
+   </style>
+    </head>
+    <body onload="myFunc()">
+        <div class="container"> 
+        <form>
+                <label class="mainlabel">Name<sup>*</sup></label>
+            <div class="row">
+                <div class="col icon">
+                  <input type="text" class="form-control" required>
+                  <i class="fas fa-exclamation icon1"></i>
+                  <label class="name">First</label>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control">
+                  <label class="name">Last</label>
+                </div>
+            </div>
+            <label class="mainlabel">Email<sup>*</sup></label>
+            <div class="col-5">
+                <input type="email" class="form-control" required>
+            </div>
+            <label class="mainlabel">Your Experience<sup>*</sup></label>
+            <div class="star-icon">
+                <input type="radio" class="rating" name="rating" id="rating1" checked required>
+                <label for="rating1" class="fa fa-star"></label>
+                <input type="radio" class="rating" name="rating" id="rating2" checked required>
+                <label for="rating2" class="fa fa-star"></label>
+                <input type="radio" class="rating" name="rating" id="rating3" checked required>
+                <label for="rating3" class="fa fa-star"></label>
+                <input type="radio" class="rating" name="rating" id="rating4" checked required>
+                <label for="rating4" class="fa fa-star"></label>
+                <input type="radio"  class="rating" name="rating" id="rating5" checked required>
+                <label for="rating5" class="fa fa-star"></label>
+            </div>
+              <p>Overall , how would you rate your experience with us?</p>
+          <label class="mainlabel">How satisfied are you with<sup>*</sup></label>
+            <div class="row radios">
+                <div class="offset-2 col"><label>Very Unsatisfied</label></div>
+                <div class="col"><label>Unsatisfied</label></div>
+                <div class="col"><label>Neutral</label></div>
+                <div class="col"><label>Satisfied</label></div>
+                <div class="col"><label>Very Satisfied</label></div>
+            </div>
+            <div class="row radios radios1">
+                <div class="col"><label>Purchase</label></div>
+                <div class="col"><input type="radio" name="purchase" value="Very Unsatisfied" required></div>
+                <div class="col"><input type="radio" name="purchase" value="Unsatisfied" required></div>
+                <div class="col"><input type="radio" name="purchase" value="Neutral" required></div>
+                <div class="col"><input type="radio" name="purchase" value="Satisfied" required></div>
+                <div class="col"><input type="radio" name="purchase" value="Very Satisfied" required></div>
+            </div>
+            <div class="row radios radios1">
+                <div class="col"><label>Service</label></div>
+                <div class="col"><input type="radio" name="Service" value="Very Unsatisfied" required></div>
+                <div class="col"><input type="radio" name="Service" value="Unsatisfied" required></div>
+                <div class="col"><input type="radio" name="Service" value="Neutral" required></div>
+                <div class="col"><input type="radio" name="Service" value="Satisfied" required></div>
+                <div class="col"><input type="radio" name="Service" value="Very Satisfied" required></div>
+            </div>
+            <div class="row radios radios1">
+                <div class="col"><label>Company Overall</label></div>
+                <div class="col"><input type="radio" name="CompanyOverall" value="Very Unsatisfied" required></div>
+                <div class="col"><input type="radio" name="CompanyOverall" value="Unsatisfied" required></div>
+                <div class="col"><input type="radio" name="CompanyOverall" value="Neutral" required></div>
+                <div class="col"><input type="radio" name="CompanyOverall" value="Satisfied" required></div>
+                <div class="col"><input type="radio" name="CompanyOverall" value="Very Satisfied" required></div>
+            </div>
+            <label  class="mainlabel">How likely are you with<sup>*</sup></label>
+            <div class="row radios">
+                <div class="offset-2 col"><label>Very Unlikely</label></div>
+                <div class="col"><label>Unlikely</label></div>
+                <div class="col"><label>Neutral</label></div>
+                <div class="col"><label>Likely</label></div>
+                <div class="col"><label>Very Likely</label></div>
+            </div>
+            <div class="row radios radios2">
+                <div class="col"><label>Buy from us again</label></div>
+                <div class="col"><input type="radio" name="Buy" value="Very Unlikely" required></div>
+                <div class="col"><input type="radio" name="Buy" value="Unlikely" required></div>
+                <div class="col"><input type="radio" name="Buy" value="Neutral" required></div>
+                <div class="col"><input type="radio" name="Buy" value="Likely" required></div>
+                <div class="col"><input type="radio" name="Buy" value="Very Likely" required></div>
+            </div>
+            <div class="row radios radios2">
+                <div class="col"><label>Recommend our product to others</label></div>
+                <div class="col"><input type="radio" name="product" value="Very Unlikely" required></div>
+                <div class="col"><input type="radio" name="product" value="Unlikely" required></div>
+                <div class="col"><input type="radio" name="product" value="Neutral" required></div>
+                <div class="col"><input type="radio" name="product" value="Likely" required></div>
+                <div class="col"><input type="radio" name="product" value="Very Likely" required></div>
+            </div>
+            <div class="row radios radios2">
+                <div class="col"><label>Recommend our company to others</label></div>
+                <div class="col"><input type="radio" name="company" value="Very Unlikely" required></div>
+                <div class="col"><input type="radio" name="company" value="Unlikely" required></div>
+                <div class="col"><input type="radio" name="company" value="Neutral" required></div>
+                <div class="col"><input type="radio" name="company" value="Likely" required></div>
+                <div class="col"><input type="radio" name="company" value="Very Likely" required></div>
+            </div>
+        <div class="icon"><label  class="mainlabel" for="additionaldetail">Additional comments or suggestions</label><br>
+        <textarea id="additionaldetail" rows="5" cols="100"></textarea><img src="https://static.thenounproject.com/png/5218-200.png"></div>
+        <button>Submit</button>
+        </form>
+    </div>
+    <a href="index.html"><i class="fas fa-book-reader icon2"></i></a>
+    </body>
+    </body>
+</html>
